@@ -20,7 +20,7 @@ namespace TBC_API.Repositories
         public async Task<User> Login(string username, string password)
         {
             var user = await dataContext.Users.FirstOrDefaultAsync(x => x.Username == username);
-
+             
             if (user == null)
                 return null;
 
